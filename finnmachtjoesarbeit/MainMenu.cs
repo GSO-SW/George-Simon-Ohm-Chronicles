@@ -156,6 +156,8 @@ namespace finnmachtjoesarbeit
                             case 0:
                                 break;
                             case 1:
+                                Episode1 e1 = new Episode1();
+                                e1.StartNewGame();
                                 break;
                             case 2:
                                 Krankenhouse k = new Krankenhouse();

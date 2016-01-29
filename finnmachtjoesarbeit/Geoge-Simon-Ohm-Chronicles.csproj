@@ -42,12 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Befehlseingabeanalyse.cs" />
+    <Compile Include="Features.cs" />
     <Compile Include="game.cs" />
     <Compile Include="Hauptstrasse.cs" />
     <Compile Include="Krankenhaus.cs" />
+    <Compile Include="Layout.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schuetze.cs" />
+    <Compile Include="StoryMagier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
