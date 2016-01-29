@@ -283,6 +283,7 @@ namespace finnmachtjoesarbeit
 
                                                 weg = "Raum 2";
                                                 wiederholung3 = "Nein";
+                                                wiederholung2 = "Nein";
 
                                             }
 
@@ -297,6 +298,7 @@ namespace finnmachtjoesarbeit
 
                                                 weg = "Raum 2";
                                                 wiederholung3 = "Nein";
+                                                wiederholung2 = "Nein";
                                             }
 
                                             #endregion
