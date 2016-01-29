@@ -17,10 +17,10 @@ namespace finnmachtjoesarbeit
 
 
         private bool MofaVorhanden = true;
-        private string Mofa = "Mitten im Raum steht ein Mofa. Der Schlüssel steckt im Schloss. Auf den ersten Blick scheint es funktionstüchtig. ";
+        private string Mofa = "Mitten im Raum steht ein >Mofa<. Der Schlüssel steckt im Schloss. Auf den ersten Blick scheint es funktionstüchtig. ";
 
         private bool KanisterVorhanden = true;
-        private string Kanister = "Auf der Werkbank liegt ein dreckiger Kanister und ein alter Schlauch. ";
+        private string Kanister = "Auf der Werkbank liegt ein dreckiger >Kanister< und ein alter Schlauch. ";
 
         private bool SchraubenSchlüsselVorhanden = true;
         private string SchraubenSchlüssel = "Auf dem Boden liegt ein verrosteter Schraubenschlüssel. ";

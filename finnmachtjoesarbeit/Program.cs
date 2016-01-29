@@ -260,7 +260,7 @@ namespace finnmachtjoesarbeit
         {
             legame = mygame;
         }
-        public void KioskBetreten()
+        public void WerkstattBetreten()
         {
             pMofa = legame.Mofa;
             pKanister = legame.KanisterSchlauch;
@@ -276,7 +276,7 @@ namespace finnmachtjoesarbeit
                         Console.WriteLine(a.GetSetUmschautext);
                         break;
                     case "untersuche Mofa":
-                        if (legame.Wasserflasche == false)
+                        if (legame.Mofa == false)
                         {
                             Console.WriteLine("Das Mofa springt an. Das braucht bestimmt keiner mehr.");
                             a.GetSetMofaVorhanden = false;
@@ -371,18 +371,18 @@ namespace finnmachtjoesarbeit
             {
                 Console.Clear();
                 //Autounfall standardtext
-                Console.WriteLine("Du kommst aus dem Krankenhaus raus du erkennst ,dass du dich in einer Kleinstadt befindest.\nAnscheinend sind die meisten Bürger schon geflohen.\nEs sind nur ein paar Menschen übrig geblieben die Taschen in ihre Autos laden und die Stadt verlassen wollen.\nPlötzlich verurachen zwei Autos einen tödlichen Unfall, in dem sie mitten auf der Straßen zusammen stoßen.\nEiner der Fahrer scheint noch zu leben.\nDu kannst zum Unfall gehen oder weggehen.\n");
-
+                Console.WriteLine("Du kommst aus dem Krankenhaus raus du erkennst ,dass du dich in einer Kleinstadt befindest.\nAnscheinend sind die meisten Bürger schon geflohen.\nEs sind nur ein paar Menschen übrig geblieben die Taschen in ihre Autos laden und die Stadt verlassen wollen.\nPlötzlich verurachen zwei Autos einen tödlichen Unfall, in dem sie mitten auf der Straßen zusammen stoßen.\nEiner der Fahrer scheint noch zu leben.");
+                Console.WriteLine("Du kannst :\n-weiter gehen\n-zum Unfall gehen\n");
                 Console.Write("+>");
                 Unfalleingabe = Console.ReadLine();
 
                 //Benutzer geht nicht zum NPC
-                if (Unfalleingabe == "gehe weg")
+                if (Unfalleingabe == "weiter gehen")
                 {
                     falscheEingabe = false;
                 }
                 //Benutzer geht zum NPC
-                if (Unfalleingabe == "gehe zum Unfall")
+                if (Unfalleingabe == "zum Unfall gehen")
                 {
                     Console.WriteLine("Du kannst dem Verletzten helfen, Informationen fordern oder weggehen.\n");
                     bool NPCsequenzBeendet = false;
@@ -464,13 +464,12 @@ namespace finnmachtjoesarbeit
         public void rueckkehren()
         {
             bool zurückZurStraße = false;
+            Console.WriteLine("Die Autos sind totaler Schrott.\nDie werden sich keinen cm mehr bewegen.\nDu bist traurig über den Toten Verletzten.\n");
             do
             {
-                Console.WriteLine("Die Autos sind totaler Schrott.\nDie werden sich keinen cm mehr bewegen.\nDu bist traurig über den Toten Verletzten.\n");
-
                 string Autoeingabe = Console.ReadLine();
                 //Benutzer fängt Benzin auf
-                if (Autoeingabe == "fang das Benzin auf")
+                if (Autoeingabe == "untersuche Benzin")
                 {
                     //Benutzer hat den Kanister
                     if (legame.KanisterSchlauch == true)
@@ -489,12 +488,12 @@ namespace finnmachtjoesarbeit
 
                 else if (Autoeingabe == "umsehen")
                 {
-                    Console.WriteLine("Es Läuft Benzin aus dem Tank des einen Autos.");
+                    Console.WriteLine("Es Läuft >Benzin< aus dem Tank des einen Autos.");
                     if (legame.Kanistervoll == false)
                         Console.WriteLine("Villeicht kannst du es auffangen.\n");
                 }
 
-                else if (Autoeingabe == "gehe zur Straße")
+                else if (Autoeingabe == "zurück gehen")
                 {
                     zurückZurStraße = true;
                 }
@@ -503,6 +502,7 @@ namespace finnmachtjoesarbeit
 
         }
     }
+
 
     class Episode1
     {
