@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoge-Simon-Ohm-Chronicles", "finnmachtjoesarbeit\Geoge-Simon-Ohm-Chronicles.csproj", "{365A6E13-485E-42F3-B9C0-60AADD4CC3EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projektwoche Ep1", "..\..\Projektwoche Ep1\Projektwoche Ep1\Projektwoche Ep1\Projektwoche Ep1.csproj", "{B88FFA51-0347-41B9-AAED-4367FB2ECFFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{365A6E13-485E-42F3-B9C0-60AADD4CC3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365A6E13-485E-42F3-B9C0-60AADD4CC3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{365A6E13-485E-42F3-B9C0-60AADD4CC3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88FFA51-0347-41B9-AAED-4367FB2ECFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88FFA51-0347-41B9-AAED-4367FB2ECFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88FFA51-0347-41B9-AAED-4367FB2ECFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88FFA51-0347-41B9-AAED-4367FB2ECFFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
