@@ -14,6 +14,7 @@ namespace finnmachtjoesarbeit
     {
         static void Main(string[] args)
         {
+            Layout.Design();
             game mygame = new game();
             MainMenu Menu = new MainMenu();
             Menu.Hauptmenu();
@@ -380,6 +381,7 @@ namespace finnmachtjoesarbeit
                 if (Unfalleingabe == "weiter gehen")
                 {
                     falscheEingabe = false;
+                    legame.Infos = false;
                 }
                 //Benutzer geht zum NPC
                 if (Unfalleingabe == "zum Unfall gehen")
