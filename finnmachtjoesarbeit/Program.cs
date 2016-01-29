@@ -503,6 +503,7 @@ namespace finnmachtjoesarbeit
 
         }
     }
+
     class Episode1
     {
         public void StartNewGame()
@@ -789,7 +790,7 @@ namespace finnmachtjoesarbeit
                             Layout.Layout_Text2(1, "Was willst du nun machen?\n\n1\tSteine weiter beobachten\n2\tHöhle verlassen");
 
                         }
-                    } while (wahl2 != "1" && wahl != "2");
+                    } while (wahl2 != "1" && wahl2 != "2");
                 }
                 else if (wahl == "2")
                 {
@@ -978,28 +979,28 @@ namespace finnmachtjoesarbeit
                     Layout.Layout_Text2(1, "*gehe zum Kirchenplatz*");
                     Console.ReadLine();
                     Console.Clear();
-                    Layout.Layout_Text2(1, "Pather : Amen Mein Bruder " + name);
+                    Layout.Layout_Text2(1, "Pater : Amen Mein Bruder " + name);
                     Console.ReadLine();
                     Console.Clear();
                     Layout.Layout_Text2(1, "Woher kennst du meinen Namen?");
                     Console.ReadLine();
                     Console.Clear();
-                    Layout.Layout_Text2(1, "Pather : Weil ich Pather Byrol bin");
+                    Layout.Layout_Text2(1, "Pater : Weil ich Pater Byrol bin");
                     Console.ReadLine();
                     Console.Clear();
                     Layout.Layout_Text2(1, "Ok du bist eine verwunderlicher alter Greis ");
                     Console.ReadLine();
                     Console.Clear();
-                    Layout.Layout_Text2(1, "Pather Byrol : Du Bastard, wenn nennst du hier Greis..?");
+                    Layout.Layout_Text2(1, "Pater Byrol : Du Bastard, wenn nennst du hier Greis..?");
                     Console.ReadLine();
                     Console.Clear();
                     Layout.Layout_Text2(1, "Ok..., es tut mir Leid");
                     Console.ReadLine();
                     Console.Clear();
-                    Layout.Layout_Text2(1, "Pather Byrol : Sag mal Bruder " + name + " ..Bist du gläubig? ");
+                    Layout.Layout_Text2(1, "Pater Byrol : Sag mal Bruder " + name + " ..Bist du gläubig? ");
                     Console.ReadLine();
                     Console.Clear();
-                    Layout.Layout_Text2(1, "Was willst du nun antworten?\n1\t Ja\n2\t Nein\n3\t Du bist ein ungläubiger Pather Byrol ");
+                    Layout.Layout_Text2(1, "Was willst du nun antworten?\n1\t Ja\n2\t Nein\n3\t Du bist ein ungläubiger Pater Byrol ");
                     string wahl2;
 
                     do
@@ -1012,13 +1013,13 @@ namespace finnmachtjoesarbeit
                             Layout.Layout_Text2(1, "Ja");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Pather Byrol : Gut..., Gott sei mit dir");
+                            Layout.Layout_Text2(1, "Pater Byrol : Gut..., Gott sei mit dir");
                             Console.ReadLine();
                             Console.Clear();
                             Layout.Layout_Text2(1, "*du wurdest gesegnet*");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Danke Pather");
+                            Layout.Layout_Text2(1, "Danke Pater");
                             Console.ReadLine();
                             Console.Clear();
                             Layout.Layout_Text2(1, "*gehe zum Marktplatz*");
@@ -1057,13 +1058,13 @@ namespace finnmachtjoesarbeit
                             Layout.Layout_Text2(1, "Nein");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Pather Byrol : Du seist verflucht ungläubiger");
+                            Layout.Layout_Text2(1, "Pater Byrol : Du seist verflucht ungläubiger");
                             Console.ReadLine();
                             Console.Clear();
                             Layout.Layout_Text2(1, "Ach halt die Fresse");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Pather Byrol : inspektum Patronum (Zauberspruch) ");
+                            Layout.Layout_Text2(1, "Pater Byrol : inspektum Patronum (Zauberspruch) ");
                             Console.ReadLine();
                             Console.Clear();
                             Layout.Layout_Text2(1, "*du wurdest verflucht*");
@@ -1075,7 +1076,7 @@ namespace finnmachtjoesarbeit
                             Layout.Layout_Text2(1, "Simsalabim *Facecum* trifft dein Kinn");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Spiel : Pather Byrol *wurde besamt* Fluch wurde von " + name + " entfernt und wurde *gesegnet*");
+                            Layout.Layout_Text2(1, "Spiel : Pater Byrol *wurde besamt* Fluch wurde von " + name + " entfernt und wurde *gesegnet*");
                             Console.ReadLine();
                             Console.Clear();
                             Layout.Layout_Text2(1, "*gehe zum Marktplatz*");
@@ -1112,10 +1113,10 @@ namespace finnmachtjoesarbeit
                         }
                         else if (wahl2 == "3")
                         {
-                            Layout.Layout_Text2(1, "Pather Byrol : Du seist verflucht ungläubiger");
+                            Layout.Layout_Text2(1, "Pater Byrol : Du seist verflucht ungläubiger");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Pather Byrol verwandelt sich in ein Keuchheitsgürtel");
+                            Layout.Layout_Text2(1, "Pater Byrol verwandelt sich in ein Keuchheitsgürtel");
                             Console.ReadLine();
                             Console.Clear();
                             Layout.Layout_Text2(1, "Keuschheitsgürtel *springt " + name + " ins Gesicht *");
@@ -1138,7 +1139,7 @@ namespace finnmachtjoesarbeit
                             Layout.Layout_Text2(1, "Die Eingegbene Ziffer/Buchstabe ist ungültig");
                             Console.ReadLine();
                             Console.Clear();
-                            Layout.Layout_Text2(1, "Was willst du nun antworten?\n1\t Ja\n2\t Nein\n3\t Du bist ein ungläubiger Pather Byrol ");
+                            Layout.Layout_Text2(1, "Was willst du nun antworten?\n1\t Ja\n2\t Nein\n3\t Du bist ein ungläubiger Pater Byrol ");
 
 
 
@@ -1365,7 +1366,6 @@ namespace finnmachtjoesarbeit
             Console.Clear();
             Layout.Layout_Text2(1, "Wähle jetzt deine Ausbildung?");
             Console.ReadLine();
-            Console.Clear();
             Console.Clear();
 
             Console.WriteLine("Jetzt bist du am Punkt angelangt wo du zu einem Ausbilder gehst und dort einen anderen Storyverlauf.");
@@ -1815,8 +1815,8 @@ namespace finnmachtjoesarbeit
 
                             Layout.Layout_Text2(19, "Du wischst das das Blut von der Klinge");
                             Layout.Layout_Text2(20, "Und machst dich auf den weg zurück zum Dieb....");
-                            Console.Clear();
                             Thread.Sleep(3000);
+                            Console.Clear();
 
 
                             Layout.Layout_Text2(10, "Spielername: Auftrag wurde ausgeführt");
@@ -1824,8 +1824,8 @@ namespace finnmachtjoesarbeit
                             Layout.Layout_Text2(12, "Spielername: Was nun?");
                             Layout.Layout_Text2(13, "Dieb: Wir sind fertig");
 
-                            Console.Clear();
                             Thread.Sleep(3000);
+                            Console.Clear();
 
                             Layout.Layout_Text2(10, "Nach deiner Ausbildung machst du dich in Richtung der des Drachen auf was wird dich da erwarten?");
                             break;
@@ -2012,6 +2012,12 @@ namespace finnmachtjoesarbeit
 
 
             Console.ReadKey();
+
+
+
+
+
+
 
 
         }

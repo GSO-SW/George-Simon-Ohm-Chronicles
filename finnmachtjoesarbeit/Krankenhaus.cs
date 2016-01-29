@@ -43,9 +43,10 @@ namespace finnmachtjoesarbeit
 
             Console.Write("... Plötzlich wachst du in einem Krankenhausbett auf. Völlig durchschwitzt realisierst du ,dass alles was du bis jetzt erlebt hast nur ein Traum war. In dem Zimmer ist ein TV welcher angeschaltet ist.");
             Console.Write("Eine Nachrichtensprecherin spricht über einen sehr gefährlichen Virus welcher die Menschheit ausrotten könnte, da er sehr leicht übertragbar ist. Bisher bekannte Symptome sind Hautausschlag,");
-            Console.WriteLine("Schwindelanfälle und Magenkrämpfe.");
+            Console.WriteLine("Schwindelanfälle und Magenkrämpf...");
+            Console.WriteLine("Der Fernseher flakert noch einmal kurz auf und das Bild erlischt.\n\n");
 
-            Console.Write("\nWähle eine der folgenden Optionen aus, indem du diese 1:1 eintippst oder indem du die Zahl daneben eintippst.");
+            Console.WriteLine("Für den folgenden Spielverlauf: Ihnen werden Eingabemöglichkeiten vorgegeben. Entweder Sie geben die Zahl des Befehls ein oder geben Exakt den Befehl ein!\nMit einer Beliebigen Taste folgt das Spiel.\n\nViel Spaß!");
             Console.ReadLine();
             Console.Clear();
 
@@ -59,9 +60,16 @@ namespace finnmachtjoesarbeit
                 Console.Clear();
 
                 if (weg == "Aus dem Fenster schauen" || weg == "1")
+
+                    #region aus dem Fensterschauen
+
                     Console.WriteLine("Draußen scheint die Nacht, doch kannst du nicht schlafen. Das Fenster scheint aus festem Glas zu sein, welches nicht zerbricht.");
 
+                    #endregion
+
                 else if (weg == "TV einschalten" || weg == "2")
+
+                    #region TV einschalten
                     Console.WriteLine("Du versuchst eine Zeit lang den Fernseher einzuschalten, aber anscheinend fehlt dem Krankenhaus der Strom.");
 
 
@@ -70,7 +78,10 @@ namespace finnmachtjoesarbeit
 
                 else { }
 
-                #endregion
+                Console.ReadLine();
+                Console.Clear();
+
+                    #endregion
             } while (wiederholung != "Nein");
 
             wiederholung = "Ja";
@@ -92,7 +103,7 @@ namespace finnmachtjoesarbeit
 
             #endregion
 
-            #endregion
+                #endregion
 
             #region Erdgeschoss
 
@@ -125,18 +136,20 @@ namespace finnmachtjoesarbeit
                         Console.WriteLine("Anders als im Erdgeschoss ist es hier verwüstet.");
                         Console.Write("Auf dem Boden liegt das Leichnam einer Krankenschwester.");
                         Console.ReadLine();
+                        Console.Clear();
 
                         #endregion Standardtext
 
                         do
                         {
                             Console.WriteLine("Du bist im Keller.");
-                            Console.WriteLine("-Gehe zu Erdgeschoss \n.-Untersuche Krankenschwester");
+                            Console.WriteLine("1. Gehe zu Erdgeschoss \n2. Untersuche Krankenschwester");
                             weg = Console.ReadLine();
+                            Console.Clear();
 
                             #region Untersuche Krankenschwester
 
-                            if (weg == "Untersuche Krankenschwester")
+                            if (weg == "Untersuche Krankenschwester" || weg == "2")
                             {
 
 
@@ -173,7 +186,7 @@ namespace finnmachtjoesarbeit
 
                                 Console.Clear();
 
-                                if (türe == "untersucht")
+                                if (türe == "untersucht" && schlüssel != "verfügbar")
                                 {
 
                                     #region Schlüssel erhalten
@@ -192,6 +205,9 @@ namespace finnmachtjoesarbeit
 
                             }
 
+                            else if (weg == "1")
+                                weg = "Gehe zu Erdgeschoss";
+
                             else { }
 
                             #endregion
@@ -207,6 +223,7 @@ namespace finnmachtjoesarbeit
 
                     else if (weg == "Untersuche abgeschlossene Türe" || weg == "2")
                     {
+
                         #region verschlossene Türe
 
                         Console.WriteLine("Die Türe ist abgeschlossen, du brauchst einen Schlüssel um die Türe aufzuschließen. Auf der Türe steht geschrieben \"Raum 2\". ");
@@ -214,6 +231,7 @@ namespace finnmachtjoesarbeit
 
                         if (schlüssel == "nicht verfügbar")
                         {
+
                             if (npc0 == "untersucht")
                             {
                                 Console.Write("Die Krankenschwester hatte doch einen Schlüssel bei sich..");
@@ -228,6 +246,8 @@ namespace finnmachtjoesarbeit
 
                                 Console.WriteLine("Willst du die Türe aufbrechen?");
                                 Console.WriteLine("\n-Ja\n-Nein");
+
+                                Console.WriteLine();
                                 antwort = Console.ReadLine();
 
                                 #endregion
@@ -236,17 +256,23 @@ namespace finnmachtjoesarbeit
                                 if (antwort == "Ja")
                                 {
                                     #region Raum 2 aufbrechen
+
                                     if (waffe == "Beil")
                                     {
 
                                         do
                                         {
+                                            Console.Clear();
+
+                                            #region mit waffe aufbrechen?
+
                                             Console.WriteLine("Willst du das Beil nutzen, um die Tür aufzubrechen?");
                                             Console.Write("-Ja\nNein");
 
                                             antwort2 = Console.ReadLine();
 
-                                            #region Raum 2 mit Waffe aufbrechen?
+                                            #endregion
+                                            #region Ja
 
                                             if (antwort2 == "Ja")
                                             {
@@ -254,33 +280,49 @@ namespace finnmachtjoesarbeit
                                                 waffe = "nicht verfügbar";
                                                 Console.ReadLine();
 
+
                                                 weg = "Raum 2";
                                                 wiederholung3 = "Nein";
+
                                             }
 
                                             #endregion
-                                            #region Raum 2 nicht mit Waffe aufbrechen?
+                                            #region Nein
 
                                             else if (antwort2 == "Nein")
                                             {
                                                 Console.Write("Du brichst die Türe mit Körpergewalt auf und verstauchst dir dabei die Schulter.");
                                                 zustand = "verletzt";
                                                 Console.ReadLine();
+
+                                                weg = "Raum 2";
+                                                wiederholung3 = "Nein";
                                             }
 
                                             #endregion
 
                                             else { }
 
+
+
                                         } while (wiederholung3 != "Nein");
+
                                     }
 
                                     else if (waffe == "nicht verfügbar")
                                     {
+                                        #region Keine Waffe verfügbar
+
                                         Console.Write("Du brichst die Türe mit Körpergewalt auf und verstauchst dir dabei die Schulter.");
                                         zustand = "verletzt";
                                         Console.ReadLine();
+
                                         weg = "Raum 2";
+                                        wiederholung2 = "Nein";
+
+                                        Console.Clear();
+
+                                        #endregion
                                     }
                                     #endregion
                                 }
@@ -289,10 +331,12 @@ namespace finnmachtjoesarbeit
                                 {
                                     #region Raum 2 nicht aufbrechen
 
+                                    wiederholung2 = "Nein";
+
                                     #endregion
                                 }
 
-                                wiederholung2 = "Nein";
+
 
                             } while (wiederholung2 != "Nein");
 
@@ -380,11 +424,14 @@ namespace finnmachtjoesarbeit
 
                     do
                     {
+                        #region töten oder weglaufen?
+
                         Console.WriteLine("Was hast du vor?");
-                        Console.Write("1. töten\n2. weglaufen");
+                        Console.WriteLine("1. töten\n2. weglaufen");
                         npc1 = Console.ReadLine();
                         Console.Clear();
 
+                        #endregion
                         #region töten
 
                         if (npc1 == "töten" || npc1 == "1")
@@ -465,6 +512,7 @@ namespace finnmachtjoesarbeit
 
                     if (weg == "In Raum 2 umschauen" || weg == "1")
                     {
+
                         Console.Write("Außer des Leichnam des Psychopaten liegt das ein weiteres Leichnam von jemanden, dessen Gesicht zerbissen wurde.");
                         Console.ReadLine();
                         Console.Clear();
@@ -479,6 +527,7 @@ namespace finnmachtjoesarbeit
 
                             if (hauptschlüssel == "nicht verfügbar")
                             {
+
                                 Console.Write("Die Leiche hat eine Sicherheitskarte bei sich, vielleicht klappt diese beim Ausgang.");
                                 Console.ReadLine();
 
@@ -486,6 +535,7 @@ namespace finnmachtjoesarbeit
                                 hauptschlüssel = "verfügbar";
                                 Console.ReadLine();
                                 Console.Clear();
+
                             }
 
                             else if (antwort == "Leiche überprüfen" && hauptschlüssel == "verfügbar")
@@ -504,6 +554,10 @@ namespace finnmachtjoesarbeit
                                 npc3 = "Billy Yves";
                                 wiederholung2 = "Nein";
                                 Console.ReadLine();
+
+                                Console.Clear();
+                                wiederholung = "Nein";
+                                wiederholung2 = "Nein";
                             }
 
                             else if (hauptschlüssel == "nicht verfügbar")
@@ -519,11 +573,39 @@ namespace finnmachtjoesarbeit
 
                 #endregion
 
+                    else if (weg == "Gehe zum Ausgang" || weg == "2")
+                    {
 
+                        if (hauptschlüssel == "verfügbar")
+                        {
+
+                            #region hauptschlüssel verfügbar
+
+                            Console.WriteLine("Du verwendest die Sicherheitskarte und die Ausgangstüre öffnet sich. Da steht ein Name auf der Karte... BILLY YVES - Wissenschaftler.");
+                            npc3 = "Billy Yves";
+                            wiederholung2 = "Nein";
+                            Console.ReadLine();
+
+                            Console.Clear();
+                            wiederholung = "Nein";
+                            wiederholung2 = "Nein";
+
+                            #endregion
+                        }
+
+                        else if (hauptschlüssel == "nicht verfügbar")
+                        {
+                            #region hauptschlüssel nicht verfügbar
+
+                            Console.Write("Ich brauche erst noch einen Hauptschlüssel, um den Ausgang zu öffnen.");
+                            Console.ReadLine();
+
+                            #endregion
+                        }
+
+                    }
 
                     else { }
-
-                    Console.WriteLine();
 
                 } while (wiederholung2 != "Nein");
 
@@ -538,6 +620,7 @@ namespace finnmachtjoesarbeit
             Console.Write("Du verlässt das Krankenhaus.");
             Console.ReadLine();
 
+            #endregion
         }
 
 

@@ -166,8 +166,9 @@ namespace finnmachtjoesarbeit
                                 q.Strasse();
                                 break;
                             case 3:
-                                Hauptstrasse zt = new Hauptstrasse();
-                                zt.Strasse();
+                                //Hauptstrasse zt = new Hauptstrasse();
+                                //zt.Strasse();
+                                Environment.Exit(0);
                                 break;
                         }
                         break;

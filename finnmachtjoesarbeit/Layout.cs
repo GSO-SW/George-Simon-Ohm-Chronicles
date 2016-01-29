@@ -18,7 +18,7 @@ namespace TheGSOTextgame_V_0_1
             width = 120 ;
             height = 30 ;
             Console.SetWindowSize(width, height);
-            Console.Title = "George-Simon-Ohm Chronicles: ";
+            Console.Title = "George-Simon-Ohm Chronicles: 1. Episode Dragons`n Dungeons";
         }
         public static void Layout_Text(string sText)
         {
