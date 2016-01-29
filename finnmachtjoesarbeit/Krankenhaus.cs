@@ -59,21 +59,23 @@ namespace finnmachtjoesarbeit
                 weg = Console.ReadLine();
                 Console.Clear();
 
-                if (weg == "Aus dem Fenster schauen" || weg == "1")
+                
+
+                if (string.Equals(weg, "Aus dem Fenster schauen", StringComparison.InvariantCultureIgnoreCase) == true || weg == "1")
 
                     #region aus dem Fensterschauen
 
                     Console.WriteLine("Draußen scheint die Nacht, doch kannst du nicht schlafen. Das Fenster scheint aus festem Glas zu sein, welches nicht zerbricht.");
 
-                    #endregion
-
-                else if (weg == "TV einschalten" || weg == "2")
+                #endregion
+                
+                else if (string.Equals(weg, "TV einschalten", StringComparison.InvariantCultureIgnoreCase) == true || weg == "2")
 
                     #region TV einschalten
                     Console.WriteLine("Du versuchst eine Zeit lang den Fernseher einzuschalten, aber anscheinend fehlt dem Krankenhaus der Strom.");
 
-
-                else if (weg == "Weder noch" || weg == "3")
+                
+                else if (string.Equals(weg, "Weder noch", StringComparison.InvariantCultureIgnoreCase) == true || weg == "3")
                     wiederholung = "Nein";
 
                 else { }
@@ -81,8 +83,9 @@ namespace finnmachtjoesarbeit
                 Console.ReadLine();
                 Console.Clear();
 
-                    #endregion
-            } while (wiederholung != "Nein");
+                #endregion
+                
+            } while (string.Equals(wiederholung, "nein", StringComparison.InvariantCultureIgnoreCase) != true);
 
             wiederholung = "Ja";
 
@@ -121,7 +124,7 @@ namespace finnmachtjoesarbeit
                     Console.Clear();
 
                     #endregion
-
+                    string.Equals(weg, "Gehe zu Keller", StringComparison.InvariantCultureIgnoreCase) != true
                     if (weg == "Gehe zu Keller" || weg == "1")
                     {
 

@@ -56,6 +56,7 @@ namespace finnmachtjoesarbeit
                         DaKiosk.KioskBetreten();
                         break;
                     case "gehe zu Werkstatt":
+                        DaWerkstatt.WerkstattBetreten();
                         break;
                     case "gehe zu Angelshop":
                         DaAngelshop.AngelshopBetreten();
