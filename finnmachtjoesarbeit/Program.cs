@@ -14,6 +14,7 @@ namespace finnmachtjoesarbeit
     {
         static void Main(string[] args)
         {
+            Layout.Design();
             game mygame = new game();
             MainMenu Menu = new MainMenu();
             Menu.Hauptmenu();
@@ -380,6 +381,7 @@ namespace finnmachtjoesarbeit
                 if (Unfalleingabe == "weiter gehen")
                 {
                     falscheEingabe = false;
+                    legame.Infos = false;
                 }
                 //Benutzer geht zum NPC
                 if (Unfalleingabe == "zum Unfall gehen")
@@ -538,7 +540,7 @@ namespace finnmachtjoesarbeit
                             Console.WriteLine("{0}\nDu hast folgene Skillwerte:", name);
                             Console.WriteLine("[1]Stärke = {0}\n[2]Intelligenz = {1}\n[3]Charisma = {2}\n[4]Geschick = {3}\n[5]Ausdauer = {4}\n", staerke, intelligenz, charisma, geschick, ausdauer);
                             Console.WriteLine("Du hast noch {0} Atributpunkte", atributzeahler);
-                            Console.Write("{0}, bite weise deine Skillpunkte zu, indem du die Nummer des Atributes eingibst und mit Enter bestätigst: ", name);
+                            Console.Write("{0}, bitte weise deine Skillpunkte zu, indem du die Nummer des Attributes eingibst und mit Enter bestätigst: ", name);
                             string zuweisung = Console.ReadLine();
 
                             if (zuweisung == "1")
@@ -586,7 +588,7 @@ namespace finnmachtjoesarbeit
                                 }
                                 else
                                 {
-                                    Console.Write("Ein Attribut kann nicht höher als 10 gesetzt werden.");
+                                    Console.Write("Ein Skill kann nicht höher als 10 gesetzt werden.");
                                     Console.ReadLine();
                                 }
                             }
@@ -806,7 +808,7 @@ namespace finnmachtjoesarbeit
                     Layout.Layout_Text2(1, "Was willst du nun machen?\n1\t Höhle erkunden\n2\t Höhle verlassen ");
                 }
             } while (wahl != "1" && wahl != "2");
-            Layout.Layout_Text2(1, "Endlich draußen..., wow was für eine Fantasiereiche Welt ");
+            Layout.Layout_Text2(1, "Endlich draußen..., wow was für eine fantasiereiche Welt ");
             Console.ReadLine();
             Console.Clear();
             Layout.Layout_Text2(1, "Oh Ich glaub ich seh eine Stadt");
@@ -1368,15 +1370,16 @@ namespace finnmachtjoesarbeit
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("Jetzt bist du am Punkt angelangt wo du zu einem Ausbilder gehst und dort einen anderen Storyverlauf.");
+            Console.WriteLine("Nun kannst du eine Ausbildung auswählen, je nach Wahl ändert sich die Story!");
             Thread.Sleep(2500);
             Console.WriteLine("[1] Soldat\n[2]Magier\n[3]Dieb\n[4]Schütze");
             Thread.Sleep(2500);
             Console.Write("Bitte die Zahl deiner Ausbildung eingeben: ");
-            string ausbwahl = Console.ReadLine();
+            
 
             do
             {
+                string ausbwahl = Console.ReadLine();
                 if (ausbwahl == "1")
                 {
                     ent = Convert.ToInt32(ausbwahl);
@@ -1433,56 +1436,57 @@ namespace finnmachtjoesarbeit
                 Layout.Layout_Text2(21, @"Held, möchtest du die Lehre eines Soldaten beginnen?Ja(J) oder Nein(N)‘‘. ");
                 Thread.Sleep(950);
 
-                string eingabe = Console.ReadLine();
+                string sEingabe;
+                    sEingabe = Console.ReadLine();
                 Console.Clear();
                 do
                 {
 
 
-                    if (eingabe == "A" || eingabe == "a")
+                    if (sEingabe == "A" || sEingabe == "a")
                     {
                         Layout.Layout_Text2(10, @"Soldat: Nun denn begebe dich in meine Halle");
                         Thread.Sleep(500);
                         Console.Clear();
                         Layout.Layout_Text2(11, name + ":Okey");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(12, @"Soldat: Du wirst nun Ein Training beginnen..");
+                        Layout.Layout_Text2(12, @"Soldat: Du wirst nun ein Training beginnen..");
                         Thread.Sleep(200);
-                        Layout.Layout_Text2(13, "Soldat: Deine Kräfte werden entfesselt und deine Wahre Stärke wird gezeigt.");
+                        Layout.Layout_Text2(13, "Soldat: Deine Kräfte werden entfesselt und deine wahre Stärke wird gezeigt.");
                         Thread.Sleep(500);
                         Console.Clear();
-                        Layout.Layout_Text2(14, name + ":Nach einem Monat,habe ich meine 'Lehre' abgeschlossen mit Bravur");
+                        Layout.Layout_Text2(14, name + ":Nach einem Monat,habe ich meine 'Lehre' mit Bravur abgeschlossen");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(15, "Soldat: Nun geht und finde deinen eigenen weg du bastard");
+                        Layout.Layout_Text2(15, "Soldat: Nun geh und finde deinen eigenen Weg du Bastard");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(16, name + ":Danke dir bruder hab dich auch lieb ");
+                        Layout.Layout_Text2(16, name + ":Danke dir Bruder hab dich auch lieb ");
                         Thread.Sleep(500);
                         Console.Clear();
 
                     }
-                    else if (eingabe == "B" || eingabe == "b")
+                    else if (sEingabe == "B" || sEingabe == "b")
                     {
                         Layout.Layout_Text2(10, "Soldat: Viel Glück in dieser Welt du Dödel");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(11, name + ":Halt den rand du alter sack");
+                        Layout.Layout_Text2(11, name + ":Halt den Rand du alter Sack");
                         Thread.Sleep(500);
                         Console.Clear();
-                        Layout.Layout_Text2(12, "Du bist auf dem weg zum Wald....");
+                        Layout.Layout_Text2(12, "Du bist auf dem Weg zum Wald....");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(13, "plötzlich ertöhnt eine stimme : Geld her oder du stirbst!!!!!!!");
+                        Layout.Layout_Text2(13, "plötzlich ertöhnt eine Stimme : Geld her oder du stirbst!!!!!!!");
                         Thread.Sleep(2500);
                         Layout.Layout_Text2(14, name + ":Wer ist da ?");
                         Thread.Sleep(500);
                         Layout.Layout_Text2(15, "Der Dieb springt vom Baum runter und haut dich K.O.");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(16, name + @":Ahhhhh....Man hab ich kopfschmerzen...!");
+                        Layout.Layout_Text2(16, name + @":Ahhhhh....Man hab ich Kopfschmerzen...!");
                         Thread.Sleep(2500);
-                        Layout.Layout_Text2(17, "Scheiße meine sachen sind weg!!!!!");
+                        Layout.Layout_Text2(17, "Scheiße meine Sachen sind weg!!!!!");
                         Thread.Sleep(2500);
                         Console.Clear();
                         Layout.Layout_Text2(18, "Du kehrst zurück zum Soldaten und erklärst was passiert ist...");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(19, @"Soldat: Hahahaha, kleiner wicht ab in die Arena mit dir!!!");
+                        Layout.Layout_Text2(19, @"Soldat: Hahahaha, kleiner Wicht ab in die Arena mit dir!!!");
                         Thread.Sleep(500);
                         Layout.Layout_Text2(20, "Morgen um 6:00 Uhr pünktlich zum Training");
                         Thread.Sleep(500);
@@ -1493,12 +1497,12 @@ namespace finnmachtjoesarbeit
                         Thread.Sleep(500);
                         Layout.Layout_Text2(23, "Doch es hat sich gelohnt..Ich habe gelernt mit meinen Kräften umzugehen.");
                         Thread.Sleep(500);
-                        Layout.Layout_Text2(24, "Nun bin ich den Kommenden Abenteuer gewaffnet!");
+                        Layout.Layout_Text2(24, "Nun bin ich den kommenden Abenteuer gewaffnet!");
                         Thread.Sleep(500);
                         Console.Clear();
                     }
 
-                } while (eingabe == "a" || eingabe == "A" || eingabe == "b" || eingabe == "B");
+                } while (sEingabe == "a" || sEingabe == "A" || sEingabe == "b" || sEingabe == "B");
 
                 do
                 {

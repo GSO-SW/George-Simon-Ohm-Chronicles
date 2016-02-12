@@ -40,27 +40,34 @@ namespace finnmachtjoesarbeit
                             Console.WriteLine("Safehouse");
                         Console.ReadKey();
                         break;
+
                     case "zurück gehen":
                         Console.WriteLine("Du stehst auf der Hauptstrasse\n");
                         Console.WriteLine("Standartbefehle : \ngehe zu x\nuntersuche x\numsehen\nweiter gehen\nzurück gehen\n");
                         break;
+
                     case "gehe zu Wohnhaus":
                         DaHaus.InfosFinden();
                         break;
+
                     case "gehe zu Autounfall":
                         Console.Clear();
                         y.rueckkehren();
                         Console.ReadKey();
                         break;
+
                     case "gehe zu Kiosk":
                         DaKiosk.KioskBetreten();
                         break;
+
                     case "gehe zu Werkstatt":
                         DaWerkstatt.WerkstattBetreten();
                         break;
+
                     case "gehe zu Angelshop":
                         DaAngelshop.AngelshopBetreten();
                         break;
+
                     case "gehe zu Safehouse":
                         if (gameclass.Infos == true)
                         {
